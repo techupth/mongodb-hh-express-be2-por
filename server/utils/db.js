@@ -2,7 +2,7 @@
 import { MongoClient } from 'mongodb';
 
 const connectionString = 'mongodb://127.0.0.1:27017';
-const dbName = 'practice-mongo'
+export const dbName = 'practice-mongo'
 
 export let db;
 
@@ -10,7 +10,7 @@ export const client = new MongoClient(connectionString, {useUnifiedTopology: tru
 
 export async function connectDatabase() {
     try {
-        //connect to 
+        //connect
         await client.connect();
         console.log('successfully connected to mongoDB');
 
